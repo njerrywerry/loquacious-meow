@@ -132,10 +132,15 @@ ussd_proceed($ussd_text);
 else if(count($details) == 4){
 $username=$details[1];
 $password=$details[2];
-$year=$details[3];
-$semester=$details[4];
+$nextoption=$details[3];
+
+
+if($nextoption=="1"){
 $accbalance="Ksh. 23,000";
+}else if($nextoption=="2"){
 $loanst="Approved/Offer";
+}
+
 echo "END Account Details: <br/>
 Account Number: " . $username . "<br/>" .
 "Account Balance: " . $accbalance . "<br/>" .
